@@ -9,6 +9,7 @@ object ProcessingEmployees {
   def main(args: Array[String]) {
     val result = List("neal", "s", "stu", "j", "rich", "bob", "aiden", "j", "ethan",
       "liam", "mason", "noah", "lucas", "jacob", "jayden", "jack")
+      .par //  In the Scala version, I can make the code parallel by adding par to the stream, as shown in Example 2-8.
       .filter(_.length() > 1)
       .map(_.capitalize)
       .reduce(_ + "," + _)
