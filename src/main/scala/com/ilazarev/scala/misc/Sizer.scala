@@ -12,9 +12,9 @@ object PageLoader {
 object TestSizer extends App {
   val urls = List(
     "http://www.amazon.com/",
-    "http://www.twitter.com/",
-    "http://www.google.com/",
-    "http://www.cnn.com/"
+    "https://www.twitter.com/",
+//    "http://www.google.com/",
+    "https://www.cnn.com/"
   )
 
   // START:time
@@ -61,11 +61,10 @@ object TestSizer extends App {
     getPageSizeSequentially
   }
 
-/*
-  println("Concurrent run")
+  println("Concurrent run:")
   timeMethod {
     getPageSizeConcurrently
   }
-*/
+
   // END:script
 }
